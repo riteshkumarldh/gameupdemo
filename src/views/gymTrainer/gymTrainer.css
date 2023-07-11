@@ -1,0 +1,127 @@
+.gymTrainer {
+  background-image: linear-gradient(
+    to right,
+    rgba(219, 114, 0, 1),
+    rgba(255, 148, 32, 0.87)
+  );
+  padding-bottom: 140px;
+  padding-inline: 2rem;
+}
+
+.gymTrainer__top {
+  padding-top: 101px;
+}
+
+.gymTrainer__top h1 {
+  max-width: 917px;
+  margin-inline: auto;
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 6.5rem;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.trainer__form {
+  max-width: 1002px;
+  width: 100%;
+  margin-inline: auto;
+  background-color: rgba(240, 242, 245, 1);
+  border-radius: 10px;
+  padding: 70px;
+  margin-top: 51px;
+}
+
+.trainer__form .form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.5fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 34px;
+  column-gap: 22px;
+}
+
+.uploader {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.uploader label,
+h4 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 7%;
+  cursor: pointer;
+}
+
+.uploader label {
+  color: rgba(125, 125, 125, 1);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.uploader h4 {
+  color: rgba(255, 67, 67, 1);
+}
+
+.trainer__form .form > div:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+.trainer__form .form > div:nth-child(9) {
+  grid-row: 5 / span 2;
+
+  /* border: 1px solid; */
+  grid-column: 2 / span 1;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41px;
+}
+
+.form__btns button:nth-child(1) {
+  border: 1px solid;
+  width: 205px;
+  height: 50px;
+  color: rgba(35, 31, 32, 1);
+  border: 3px solid rgba(35, 31, 32, 1);
+}
+
+.input__wrapper textarea {
+  resize: none;
+  width: 100%;
+  height: 170px;
+  outline: none;
+  padding-block: 0.5rem;
+}
+
+.fileInput {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .gymTrainer__top h1 {
+    font-size: 5rem;
+  }
+  .trainer__form {
+    padding: 28px;
+  }
+  .trainer__form .form {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .trainer__form .form > div:nth-child(1) {
+    grid-column: initial;
+  }
+  .trainer__form .form > div:nth-child(9) {
+    grid-column: initial;
+  }
+  .form__btns {
+    gap: 18px;
+  }
+}

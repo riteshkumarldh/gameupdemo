@@ -1,0 +1,122 @@
+.destination__cards {
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 25px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.destination__cards {
+  margin-bottom: 50px;
+}
+
+.card__content {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  padding: 39px 23px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.destination__title {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.destination__title p {
+  color: var(--black);
+}
+.destination__title span {
+  color: var(--white);
+}
+
+.card__content h3 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 7%;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+
+.card__content p {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.card__content:nth-child(1),
+.card__content:nth-child(4) {
+  color: rgba(35, 31, 32, 1);
+}
+
+.card__content:nth-child(2),
+.card__content:nth-child(3) {
+  color: rgba(255, 255, 255, 1);
+}
+
+.card__btn {
+  margin-top: 50px;
+  background-color: var(--main-color);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 47px;
+  border-radius: 100px;
+  transition: 200ms;
+}
+
+.card__btn:is(:hover, :focus-visible) {
+  background-image: linear-gradient(
+    to left,
+    rgba(219, 114, 0, 1),
+    rgba(255, 148, 32, 0.87)
+  );
+}
+
+.card__content.searchPage {
+  margin-bottom: 0;
+}
+
+.destination__title.searchPageTitle p {
+  color: var(--main-color);
+}
+.destination__title.searchPageTitle span {
+  color: var(--black);
+}
+
+.destination__title.user {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  .destination__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .destination__cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card__content {
+    padding: 30px 20px;
+  }
+
+  .destination__title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,127 @@
+.register__popup {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 2rem;
+}
+
+.register__popup.show {
+  display: flex;
+}
+
+.register__popup .overlayRegister {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.register__popup .modal {
+  max-width: 1000px;
+  width: 100%;
+  min-height: 523px;
+  border-radius: 10px;
+  background-color: rgba(240, 242, 245, 1);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.register__popup .modal .modal__top {
+  height: 90px;
+  background-color: rgba(35, 31, 32, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  position: relative;
+  text-align: center;
+}
+
+.register__popup .modal .modal__top h3 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 600;
+  letter-spacing: 7%;
+}
+
+.register__popup .modal .modal__top > figure {
+  position: absolute;
+  right: 2rem;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(75, 78, 85, 1);
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.register__popup .modal .modal__top > figure img {
+  transform: scale(0.7);
+}
+
+/* modal form */
+
+.modal__form form .inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 28px;
+  padding: 52px 71px;
+}
+
+.modal__form form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.modal__form form button {
+  margin-inline: auto;
+}
+
+.modal__form--info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  letter-spacing: 5%;
+}
+
+.modal__form--info h4 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+  gap: 0.5rem;
+  letter-spacing: 5%;
+}
+
+.modal__form--info a {
+  color: var(--main-color);
+}
+
+@media (max-width: 550px) {
+  .modal__form form .inputs {
+    grid-template-columns: 1fr;
+    padding: 50px 30px;
+  }
+
+  .modal__form {
+    height: 80vh;
+    overflow: auto;
+    padding-bottom: 5rem;
+  }
+}

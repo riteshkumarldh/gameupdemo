@@ -1,0 +1,50 @@
+.button {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 50px;
+  min-width: 152px;
+  border-radius: 100px;
+  display: grid;
+  place-content: center;
+}
+
+.button.home {
+  width: max-content;
+  background-color: transparent;
+  border: 2px solid var(--white);
+  color: var(--white);
+  padding-inline: 5rem;
+  margin-top: 30px;
+  transition: 200ms;
+}
+
+.button.home:is(:hover, :focus-visible) {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button.loginBtn {
+  color: white;
+  border: 2px solid var(--white);
+  transition: 200ms;
+}
+
+.button.loginBtn:is(:hover, :focus-visible) {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.button.join {
+  color: white;
+  background-color: var(--main-color);
+  transition: 200ms;
+}
+
+.button.join:is(:hover, :focus-visible) {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 148, 32, 0.87),
+    rgba(219, 114, 0, 1)
+  );
+}

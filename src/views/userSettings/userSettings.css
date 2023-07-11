@@ -1,0 +1,122 @@
+.settings__container {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr 2fr;
+  margin-block: 82px;
+  gap: 22px;
+}
+
+.settings__container > div {
+  border: 1px solid rgba(217, 217, 214, 1);
+  border-radius: 10px;
+  min-height: 550px;
+}
+
+.settings__top {
+  padding-block: 20px;
+  border-bottom: 1px solid rgba(217, 217, 214, 1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 23px;
+}
+
+.settings__top .settings__top--left {
+  display: flex;
+  gap: 15px;
+}
+
+.settings__top .settings__top--left span {
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4.5%;
+  line-height: 27px;
+}
+
+.settings__top--right > button {
+  text-transform: uppercase;
+  color: var(--main-color);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 5%;
+}
+
+.settings__bottom {
+  padding: 25px 23px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.settings__single {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings__single > img {
+  cursor: pointer;
+}
+
+.settings__account--bottom {
+  padding: 25px 20px;
+}
+
+.account__setting--title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(75, 78, 85, 0.7);
+  line-height: 21px;
+  letter-spacing: 4.5%;
+  display: block;
+}
+
+.account__settings > div p {
+  margin-top: 8px;
+  line-height: 1;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.account__settings > div {
+  margin-bottom: 25px;
+}
+
+.account__settings > div textarea,
+.account__settings > div input {
+  border: 1px solid rgba(217, 217, 214, 1);
+  height: 32px;
+  padding-inline: 5px;
+  padding-block: 5px;
+  outline: none;
+  font: inherit;
+  margin-top: 3px;
+}
+
+.account__settings > div textarea:is(:hover, :focus-visible),
+.account__settings > div input:is(:hover, :focus-visible) {
+  border: 1px solid var(--main-color);
+}
+
+.account__settings > div textarea {
+  height: 80px;
+  resize: none;
+  width: 100%;
+  font-size: 1.6rem;
+}
+
+@media (max-width: 1100px) {
+  .settings__container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings__container {
+    grid-template-columns: 1fr;
+  }
+
+  .settings__container > div {
+    min-height: auto;
+  }
+}

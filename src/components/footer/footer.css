@@ -1,0 +1,75 @@
+.footer {
+  background-image: linear-gradient(
+    to right,
+    rgba(219, 114, 0, 1),
+    rgba(255, 148, 32, 0.87)
+  );
+
+  height: 92px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer.transparent {
+  border-top: 1px solid rgba(236, 236, 236, 1);
+  background-image: none;
+}
+
+.footer.transparent .footer__left p {
+  color: rgba(35, 31, 32, 1);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footer.transparent .footer__right {
+  color: rgba(35, 31, 32, 1);
+}
+
+/* when we are on home Page */
+.footer.homePage {
+  background-image: none;
+  background-color: transparent;
+  position: absolute;
+  top: 92%;
+  left: 0;
+  width: 100%;
+  border-top: none;
+}
+
+/* when we are in search page */
+.footer.searchPage {
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 148, 32, 0.87),
+    rgba(219, 114, 0, 1)
+  );
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.footer__left p {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.footer__right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+@media (max-width: 550px) {
+  .footer__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

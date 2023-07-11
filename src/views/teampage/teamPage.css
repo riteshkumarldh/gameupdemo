@@ -1,0 +1,638 @@
+.teamPage__header {
+  max-height: 351px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.teamPage__header figure {
+  width: 100%;
+  max-height: 351px;
+}
+
+.teamPage__header > figure > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.teamPage__header .overlay {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(219, 114, 0, 0.9),
+    rgba(255, 148, 32, 0.8)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.teamPage__header .overlay h2 {
+  font-size: 6.5rem;
+  font-weight: 800;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.teamPage__header--edit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.teamPage__header--edit:hover {
+  opacity: 0.75;
+}
+
+.teamPage__header--edit > figure {
+  height: 18.5px;
+  width: 18.5px;
+}
+
+.teamPage__header--edit > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamPage__header--edit p {
+  white-space: nowrap;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  letter-spacing: 2px;
+}
+
+.teamPage__content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.teamPage__content--left {
+  padding-inline: 44px;
+  border-right: 1px solid rgba(236, 236, 236, 1);
+  padding-block: 92px;
+  background-color: var(--white);
+}
+
+.teamPage__content--left .content__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.teamPage__content--left .content__wrapper p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.teamPage__content--left .content__wrapper img {
+  transform: scale(0.8);
+  align-self: flex-start;
+}
+
+.teamPage__content--left .primary__btn {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.teamPage__content--left > .edit__btns .cancel__btn {
+  background-color: rgba(240, 242, 245, 1);
+  height: 47px;
+  margin-top: 17px;
+}
+
+.teamPage__content--left .content__wrapper input {
+  height: 34px;
+}
+
+.teamPage__content--left .content__wrapper textarea {
+  width: 100%;
+  height: 70px;
+  resize: none;
+  outline: none;
+  padding-block: 0.5rem;
+}
+
+.teamPage__content--left .content__wrapper textarea:is(:hover, :focus-visible) {
+  border: 1px solid var(--main-color);
+}
+
+.teamPage__content--left .content__wrapper input:is(:hover, :focus-visible) {
+  border: 1px solid var(--main-color);
+}
+
+/* right side */
+.teamPage__content--right {
+  padding: 92px 72px;
+}
+
+.teamPage__content--description {
+  margin-bottom: 80px;
+}
+
+.teamPage__content--description p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: rgba(35, 31, 32, 1);
+  max-width: 732px;
+}
+
+.teamPage__right--details {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.teamPage__right--details > div {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 6.2fr;
+}
+
+.teamPage__content--description > textarea {
+  font: inherit;
+  height: 105px;
+  max-width: 698px;
+  width: 100%;
+  border: 1px solid rgba(217, 217, 214, 1);
+  resize: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+
+.teamPage__right--details > div > h4 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: rgba(35, 31, 32, 1);
+  letter-spacing: 2.5px;
+}
+
+.teamPage__right--details input,
+.teamPage__right--details select,
+.teamPage__right--details textarea {
+  font: inherit;
+  max-width: 500px;
+  border: 1px solid rgba(217, 217, 214, 1);
+  resize: none;
+  outline: none;
+  padding: 0.5rem 1rem;
+}
+
+.teamPage__content--description > textarea:is(:hover, :focus-visible),
+.teamPage__right--details input:is(:hover, :focus-visible),
+.teamPage__right--details select:is(:hover, :focus-visible),
+.teamPage__right--details textarea:is(:hover, :focus-visible) {
+  border: 1px solid var(--main-color);
+}
+
+.teamPage__right--details input,
+.teamPage__right--details select {
+  height: 34px;
+}
+
+.teamPage__right--details textarea {
+  height: 80px;
+}
+
+.difficulty {
+  display: flex;
+  gap: 47px;
+}
+
+.difficulty > .dot {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background-color: rgba(217, 217, 217, 1);
+  cursor: pointer;
+  position: relative;
+}
+
+.difficulty > .dot > div {
+  position: absolute;
+  top: -55px;
+  left: -40px;
+  width: 94px;
+  height: 35px;
+  background-color: rgba(240, 242, 245, 1);
+  /* display: grid; */
+  place-content: center;
+  border-radius: 5px;
+  display: none;
+}
+
+.difficulty > .dot.show > div {
+  display: grid;
+}
+
+.difficulty > .dot.show {
+  background-color: var(--main-color);
+}
+
+.difficulty > .dot > div::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 16px;
+  height: 16px;
+  background-color: rgba(240, 242, 245, 1);
+}
+
+.teamPage__right--details > div p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.coaches__container {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.addCoach {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.addCoach figure {
+  width: 67px;
+  height: 67px;
+  cursor: pointer;
+}
+
+.addCoach h4 {
+  letter-spacing: 2px;
+  font-size: 1.6rem;
+}
+
+.coaches {
+  display: flex;
+  gap: 60px;
+}
+
+.coaches .coach {
+  display: flex;
+  gap: 20px;
+}
+
+.coaches .coach > figure {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.coaches .coach:nth-child(2) > figure {
+  margin-top: -10px;
+  margin-right: 20px;
+}
+
+.coach__details > div {
+  display: flex;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.coach__details > div button {
+  width: max-content;
+}
+
+.coach__details > div button:nth-child(1) {
+  color: rgba(125, 125, 125, 1);
+}
+.coach__details > div button:nth-child(2) {
+  color: rgba(255, 67, 67, 1);
+}
+
+/* .coaches .coach > figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.coach__details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.coach__details > p:nth-child(4) {
+  color: var(--main-color);
+}
+
+.coach__details > h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+/* edit team modal */
+.edit__modal {
+  position: fixed;
+  z-index: 100;
+  padding-inline: 2rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit__modal--overlay {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.teamEdit__popup {
+  max-width: 707px;
+  width: 100%;
+  margin-inline: auto;
+  min-height: 475px;
+  background-color: rgba(240, 242, 245, 1);
+  position: relative;
+  border-radius: 10px;
+}
+
+.edit__cancel {
+  width: 28px;
+  height: 28px;
+  background-color: var(--white);
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.teamEdit__upload {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.teamEdit__upload .fileInput {
+  display: none;
+}
+
+.teamEdit__popup--content {
+  padding: 54px 83px;
+}
+
+.teamEdit__upload label,
+.teamEdit__upload h4 {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.75px;
+}
+
+.teamEdit__upload label {
+  color: rgba(125, 125, 125, 1);
+  display: block;
+  margin-bottom: 7px;
+}
+
+.teamEdit__upload h4 {
+  color: rgba(255, 67, 67, 1);
+}
+
+.teamEdit__popup--content > h2 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+
+.teamedit__name {
+  margin-block: 31px 36px;
+}
+
+.teamedit__btns {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.teamedit__btns .cancel__btn {
+  width: 200px;
+  border: 2px solid rgba(35, 31, 32, 1);
+}
+
+/* coach edit */
+
+.coach__edit {
+  position: relative;
+  max-width: 1002px;
+  width: 100%;
+  margin-inline: auto;
+  min-height: 636px;
+  background-color: rgba(240, 242, 245, 1);
+  border-radius: 10px;
+}
+
+.coachedit__inputs {
+  margin-block: 36px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.coachedit__btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 23px;
+}
+
+.coachedit__btns .cancel__btn {
+  border: 2px solid rgba(35, 31, 32, 1);
+  width: 323px;
+  height: 50px;
+}
+
+.coachedit__btns .primary__btn {
+  width: 323px;
+  height: 50px;
+}
+
+.training__cost,
+.gameup__username {
+  position: relative;
+}
+
+.training__cost > input,
+.gameup__username > input {
+  padding-inline: 3rem;
+}
+
+.training__cost .before,
+.training__cost .after,
+.gameup__username .before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(35, 31, 32, 0.5);
+}
+
+.training__cost .before,
+.gameup__username .before {
+  left: 1rem;
+}
+
+.training__cost .after {
+  right: 1rem;
+}
+
+@media (max-width: 1100px) {
+  .teamPage__header .overlay h2 {
+    text-align: center;
+    line-height: 60px;
+  }
+  .teamPage__content {
+    grid-template-columns: 1fr;
+  }
+
+  .teamPage__content--right {
+    padding: 35px 16px;
+  }
+
+  .teamPage__content--left {
+    padding: 35px 16px;
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .teamPage__content--description {
+    margin-bottom: 37px;
+  }
+
+  .edit__btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .teamPage__content--left .primary__btn {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+
+  .teamPage__content--left > .edit__btns .cancel__btn {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .teamPage__right--details > div {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .teamPage__right--details > div:last-child,
+  .teamPage__right--details > div:first-child {
+    grid-template-columns: 1fr;
+  }
+
+  .coaches {
+    flex-direction: column;
+  }
+
+  .coaches .coach:nth-child(2) {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teamPage__header .overlay h2 {
+    font-size: 5rem;
+  }
+
+  .teamPage__header--edit {
+    display: none;
+  }
+
+  .difficulty {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+  .difficulty {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .coachedit__btns .primary__btn {
+    max-width: 100%;
+  }
+
+  .teamEdit__upload {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .teamEdit__upload h4 {
+    text-align: center;
+  }
+
+  .coachedit__btns .cancel__btn {
+    max-width: 100%;
+  }
+
+  .teamEdit__popup--content > h2 {
+    font-size: 2.3rem;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 786px) {
+  .coach__edit {
+    height: 90vh;
+    overflow: auto;
+  }
+
+  .teamEdit__popup--content {
+    padding: 40px;
+  }
+
+  .coachedit__inputs {
+    grid-template-columns: 1fr;
+  }
+}

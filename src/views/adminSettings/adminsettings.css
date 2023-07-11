@@ -1,0 +1,11 @@
+.admin__settings--container {
+  min-height: 100vh;
+}
+
+.admin__settings {
+  max-width: 400px;
+  width: 100%;
+  border: 1px solid rgba(217, 217, 214, 1);
+  margin-top: 82px;
+  border-radius: 10px;
+}
