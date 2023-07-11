@@ -1,10 +1,9 @@
-// img
 import { useRef, useState } from "react";
+// img
 import rightArrow from "../../assets/icons/rightArrow.svg";
 
 const SearchSlider = ({ title, children }) => {
   const sliderRef = useRef();
-
   const [slide, setSlide] = useState(0);
   const [totalSlide, setTotalSlide] = useState(null);
   // handling next slide
@@ -12,17 +11,6 @@ const SearchSlider = ({ title, children }) => {
     // total slides
     setTotalSlide(sliderRef.current.children.length);
     setSlide((prev) => prev + 1);
-
-    // const curLength = slide * 370;
-    // const totalLength = totalSlide * 370;
-
-    // if (curLength > totalLength) {
-    //   console.log("done");
-    // }
-
-    // console.log(totalLength);
-
-    // console.log(sliderLength);
   };
 
   // handling prev slide
