@@ -31,18 +31,6 @@ const HeroSlider = () => {
     setSlider((prev) => [...prev, removed]);
   }, [slider]);
 
-  // const handleSlideAdd = () => {
-  //   const removed = slider[0];
-  //   console.log("hello");
-  //   setSlider((prev) =>
-  //     prev.filter((slide) => {
-  //       return slide.id !== removed.id;
-  //     })
-  //   );
-
-  //   setSlider((prev) => [...prev, removed]);
-  // };
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       handleSlider();

@@ -91,12 +91,21 @@
 
 .slider__track {
   display: flex;
-  transition: 500ms;
+  transform: translateX(-30%);
+  transition: all 500ms ease;
 }
 
 .slider__track.slide {
-  /* animation: slide 500ms ease forwards alternate; */
-  transform: translateX(-30%);
+  animation: slide 500ms ease forwards alternate;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translate(-30%);
+  }
 }
 
 .slider__single {
@@ -132,15 +141,6 @@
   color: var(--main-color);
   text-transform: uppercase;
 }
-
-/* @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translate(calc(-100% / 3 - 2rem));
-  }
-} */
 
 @media (max-width: 1100px) {
   .home__left {
