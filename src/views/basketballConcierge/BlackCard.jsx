@@ -1,5 +1,5 @@
 // images
-import unionLogo from "../../assets/icons/union.svg";
+import unionLogo from "../../assets/icons/Union.svg";
 
 const BlackCard = () => {
   return (
