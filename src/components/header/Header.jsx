@@ -5,7 +5,7 @@ import "./header.css";
 import UserAvatar from "./UserAvatar";
 import HeaderActionButtons from "./HeaderActionButtons";
 // import img
-import logo from "../../assets/icons/GU symbol.svg";
+import logo from "../../assets/icons/GU Symbol.svg";
 import logoName from "../../assets/icons/Frame.svg";
 import menuOpen from "../../assets/icons/menuOpen.svg";
 import menuClose from "../../assets/icons/menuClose.svg";
