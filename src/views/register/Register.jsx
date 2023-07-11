@@ -6,7 +6,7 @@ import Footer from "../../components/footer/Footer";
 
 // import cnstant file
 import { registerInputs } from "../../constants/constant";
-import RegisterModal from "./registerModal";
+import RegisterModal from "./RegisterModal";
 
 const Register = () => {
   // state for holding the registre input value
